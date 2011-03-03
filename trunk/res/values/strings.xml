@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">CallBackWidget</string>
+    
+    
+    <string name="qeuCallBack">Do you want to ReCall:</string>
+    <string name="strYes">Yes</string>
+    <string name="strNo">No</string>
+    <string name="showConfScreen">Ask for Confirmation</string>
+    <string name="showDialog">Show Dialog</string>
+    <string name="showDialog2">Show Dialog?</string>
+    <string name="widgetConfig">Widget Configuration</string>
+    
+</resources>

@@ -1,0 +1,12 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/widgetConfig">
+		<ListPreference
+			android:key="show_dialog"
+			android:title="@string/showConfScreen"
+			android:summary="@string/showDialog"
+			android:entries="@array/yesno"
+			android:entryValues="@array/truefalse"
+			android:dialogTitle="@string/showDialog2" />
+	</PreferenceCategory>
+</PreferenceScreen>

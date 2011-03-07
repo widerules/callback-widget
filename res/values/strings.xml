@@ -5,8 +5,10 @@
     
     
     <string name="qeuCallBack">Do you want to ReCall:</string>
+	<string name="noPhoneNumber">Unknown Number.</string>
     <string name="strYes">Yes</string>
     <string name="strNo">No</string>
+    <string name="strOK">OK</string>
     <string name="showConfScreen">Ask for Confirmation</string>
     <string name="showDialog">Show Dialog</string>
     <string name="showDialog2">Show Dialog?</string>

@@ -4,8 +4,10 @@
     <string name="app_name">CallBackWidget</string>
     
     <string name="qeuCallBack">Prajete si volať:</string>
+    <string name="noPhoneNumber">Posledný hovor bol z utajeného čísla.</string>
     <string name="strYes">Áno</string>
     <string name="strNo">Nie</string>
+    <string name="strOK">OK</string>
     <string name="showConfScreen">Opýtať sa na Volanie</string>
     <string name="showDialog">Zobraziť Dialóg</string>
     <string name="showDialog2">Zobraziť Dialóg?</string>

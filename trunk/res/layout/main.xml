@@ -4,7 +4,7 @@
 		android:orientation="horizontal" 
 		android:background="@drawable/widget_bg_normal" 
 		android:layout_gravity="center" 
-		android:layout_height="72sp">
+		android:layout_height="60sp">
 		
 		<Button android:text="CallBack" 
 			android:id="@+id/button_two" 

@@ -128,7 +128,7 @@ public class ClickOneActivity extends Activity {
 					//		, Toast.LENGTH_SHORT).show();
         			try {
         		        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        		        callIntent.setData(Uri.parse("tel:"+callerPhoneNumber));
+        		        callIntent.setData(Uri.parse("tel: "+callerPhoneNumber));
         		        startActivity(callIntent);
         		    } catch (ActivityNotFoundException e) {
         		        Log.e("CallBack Widget", "Call failed ", e);

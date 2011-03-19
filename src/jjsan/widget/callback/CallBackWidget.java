@@ -1,6 +1,5 @@
 package jjsan.widget.callback;
 
-import jjsan.widget.callback.R;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -32,11 +31,27 @@ public class CallBackWidget extends AppWidgetProvider {
 		appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
 	}
 	
+	
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		//Toast.makeText(context, "onReceive", Toast.LENGTH_SHORT).show();
 		// v1.5 fix that doesn't call onDelete Action
+		
 		final String action = intent.getAction();
+
+	    if ("PreferencesUpdated".equals(action)) {
+	        // update your widget here
+	        // my widget supports multiple instances so I needed to uniquely identify them like this
+	    	AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+			
+	    	int appWidgetId = intent.getExtras().getInt(AppWidgetManager.EXTRA_APPWIDGET_ID);
+	        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
+			appWidgetManager.updateAppWidget(appWidgetId, views);
+			int[] appWidgetIds = new int[] {appWidgetId};
+
+	        onUpdate(context, appWidgetManager, appWidgetIds);
+	    }   		
+		
 		if (AppWidgetManager.ACTION_APPWIDGET_DELETED.equals(action)) {
 			final int appWidgetId = intent.getExtras().getInt(
 					AppWidgetManager.EXTRA_APPWIDGET_ID,
@@ -64,4 +79,15 @@ public class CallBackWidget extends AppWidgetProvider {
 			super.onReceive(context, intent);
 		}
 	}
+
+		static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+	            int appWidgetId, String titlePrefix) {
+//	        Log.d(TAG, "updateAppWidget appWidgetId=" + appWidgetId + " titlePrefix=" + titlePrefix);
+
+			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
+	        //views.setTextViewText("CallBack", "CallBack");
+
+	        // Tell the widget manager
+	        appWidgetManager.updateAppWidget(appWidgetId, views);
+	    }
 }

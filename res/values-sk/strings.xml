@@ -5,6 +5,7 @@
     
     <string name="qeuCallBack">Prajete si volať:</string>
     <string name="noPhoneNumber">Posledný hovor bol z utajeného čísla.</string>
+    <string name="noCallLog">Váš Zoznam Hovorov je prázdny.</string>
     <string name="strYes">Áno</string>
     <string name="strNo">Nie</string>
     <string name="strOK">OK</string>

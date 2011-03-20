@@ -2,10 +2,10 @@
 <resources>
     <string name="hello">Hello World!</string>
     <string name="app_name">CallBackWidget</string>
-    
-    
+
     <string name="qeuCallBack">Do you want to ReCall:</string>
 	<string name="noPhoneNumber">Unknown Number.</string>
+    <string name="noCallLog">Your Call Log is Empty.</string>
     <string name="strYes">Yes</string>
     <string name="strNo">No</string>
     <string name="strOK">OK</string>

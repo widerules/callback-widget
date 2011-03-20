@@ -8,6 +8,7 @@ import android.preference.PreferenceActivity;
 import android.widget.RemoteViews;
 
 public class Prefs extends PreferenceActivity {
+	//widget id
 	private int appWidgetId;
 	
 	public Prefs() {
@@ -18,14 +19,14 @@ public class Prefs extends PreferenceActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		//show preferences
 		addPreferencesFromResource(R.xml.prefs);
 	}
-	
+
 	//back key pressed
 	@Override
 	public void onBackPressed() {
-
+			//get an app context
 			Context context = Prefs.this;
 			
 			Intent intent = getIntent();
@@ -38,6 +39,7 @@ public class Prefs extends PreferenceActivity {
 			
 			AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
 			
+			//set up widget
 			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
 			appWidgetManager.updateAppWidget(appWidgetId, views);
 			Intent resultValue = new Intent();
@@ -50,9 +52,8 @@ public class Prefs extends PreferenceActivity {
 		    updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
 		    sendBroadcast(updateIntent);
 		    
+		    //done
 			finish();
 			
 	}
 }
-	
-

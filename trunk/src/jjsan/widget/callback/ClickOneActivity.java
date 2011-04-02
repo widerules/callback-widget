@@ -154,6 +154,7 @@ public class ClickOneActivity extends Activity {
             // Set the message to display
             if (callerName.equalsIgnoreCase("no_callerName")) {
             	alertbox.setMessage(getString(R.string.qeuCallBack)+"\n"+callerPhoneNumber+" ?");
+            	Log.d("CallBack Widget >> ","No Name");
             }	
             else
             {
@@ -169,7 +170,8 @@ public class ClickOneActivity extends Activity {
                     //lets call last number
                 	//Toast.makeText(getApplicationContext(), "CallBack: "+callerPhoneNumber
 					//		, Toast.LENGTH_SHORT).show();
-        			try {
+                	Log.d("CallBack Widget >> ","Question");
+                	try {
         		        Intent callIntent = new Intent(Intent.ACTION_CALL);
         		        callIntent.setData(Uri.parse("tel: "+callerPhoneNumber));
         		        startActivity(callIntent);
@@ -190,7 +192,7 @@ public class ClickOneActivity extends Activity {
                 	finish();
                 }
             });
-            if (!callerName.equalsIgnoreCase("no_callerName")&&!callerPhoneNumber.equalsIgnoreCase("-1"))
+            if (!callerPhoneNumber.equalsIgnoreCase("-1"))
             {
             	alertbox.show();
 			}
